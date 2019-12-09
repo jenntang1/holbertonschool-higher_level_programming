@@ -1,11 +1,9 @@
 # Overview #
-The program codes contained in this directory is for learning and dveloping proficiency with Python.  
+The program codes contained in this directory is for learning and developing proficiency with Python.  
 
 # General #
 0. Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))?  
-
-The Zen of Python, by Tim Peters  
-
+*The Zen of Python, by Tim Peters*  
 Beautiful is better than ugly.  
 Explicit is better than implicit.  
 Simple is better than complex.  
@@ -30,9 +28,7 @@ Namespaces are one honking great idea -- let's do more of those!
 Dutch programmer, Guido van Rossum created Python as a hobby during his Christmas break.  
 
 2. Who is Guido van Rossum?  
-Rossum is a computer programmer and author who created high-level programming language, Python in 1989.  The goal was to create a "Computer Programming for Everybody."  It would be an easy and intuitive language, open source and suitable for daily tasks.  
-
-Additionally, Rossum created Mondrian while at Google.  It's a web-based system written in Python for code review/peer review.  
+Rossum is a computer programmer and author who created high-level programming language, Python in 1989.  The goal was to create a "Computer Programming for Everybody."  It would be an easy and intuitive language, open source and suitable for daily tasks.  Additionally, Rossum created Mondrian while at Google.  It's a web-based system written in Python for code review/peer review.  
 
 3. Where does the name ‘Python’ come from?  
 Rossum is a big fan of the tv comedy, Monty Python.  
@@ -49,11 +45,11 @@ The following is the general syntax to printing a string in Python.
 %[flags][width][.precision]type 
 ```
 
-The following are the conversions and flags for print.  
+    The following are the conversions and flags for print.  
 ![pythonprintconversions](https://i.imgur.com/Tr4bNs4.png)  
 ![pythonprintflags](https://i.imgur.com/gXPTOmk.png)  
 
-The following are syntaxes to printing string in Python.  
+    The following are syntaxes to printing string in Python.  
 ```python
 >>> print("The capital of {0:s} is {1:s}".format("Ontario","Toronto"))
 The capital of Ontario is Toronto
@@ -61,7 +57,7 @@ The capital of Ontario is Toronto
 The capital of Ontario is Toronto
 ```
 
-The following are syntaxes to printing variables in Python.  
+    The following are syntaxes to printing variables in Python.  
 ```python
 >>> q = 459
 >>> p = 0.098
@@ -79,10 +75,10 @@ Strings needs to be enclosed with either single or double quotes.  Similiar to t
 8. What are indexing and slicing in Python?  
 Strings are a sequence of one or more individual characters.  These characters could be letters, numbers, symbols or whitespaces.  Hence, indexing and slicing are the ways to access parts of a string.  
 
-Indexing:
+    Indexing:
 ![pythonstrindexing](https://i.imgur.com/SRsxNIG.png)  
 
-Slicing:
+    Slicing:
 ```python
 >>> print(ss[6:11])
 >>> Shark
