@@ -75,11 +75,10 @@ Strings needs to be enclosed with either single or double quotes.  Similiar to t
 8. What are indexing and slicing in Python?  
 Strings are a sequence of one or more individual characters.  These characters could be letters, numbers, symbols or whitespaces.  Hence, indexing and slicing are the ways to access parts of a string.  
 
-    Indexing:  
-
+Indexing:  
 ![pythonstrindexing](https://i.imgur.com/SRsxNIG.png)  
 
-    Slicing:
+Slicing:  
 ```python
 >>> print(ss[6:11])
 >>> Shark
@@ -190,7 +189,7 @@ Pycodestyle (formerly known as Pep8) is the official Holberton Python coding sty
 9. Easter Egg  
     Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.  
 	
-10. Linked list cycle
+10. Linked list cycle  
     Write a function in C that checks if a singly linked list has a cycle in it.  
 
 # Resources #
