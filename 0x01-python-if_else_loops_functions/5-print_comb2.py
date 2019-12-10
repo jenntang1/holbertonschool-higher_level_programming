@@ -6,4 +6,4 @@ for numbers in range(00, 100):
 
 """ if number is 99, print it and a new line """
 if numbers == 99:
-    print("{:d}".format(numbers), end="\n")
+    print("{:02d}".format(numbers))
