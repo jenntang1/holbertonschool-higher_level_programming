@@ -8,8 +8,8 @@ The program codes contained in this directory is for learning and developing pro
 1. Why indentation is so important in Python?  
 Python implements a coding block style.  A block is a group of statements where indentation (whitespace) is used to distinguish it.  
 
-2. How to use the if, if ... else statements?
-In Python, if/elif (else if)/else statements ends with **:**.  There could be an unlimited elif statements and else statements are optional.  
+2. How to use the if, if ... else statements?  
+In Python, if/elif(else if)/else statements ends with **:**.  There could be an unlimited elif statements and else statements are optional.  
 ![pythonifelifelse](https://i.imgur.com/sTFfg0i.png)
 
 3. How to use comments?  
