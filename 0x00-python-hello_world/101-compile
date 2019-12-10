@@ -1,2 +1,2 @@
 #!/bin/bash
-python -mpy_compile $PYFILE
+echo $PYFILE | python -mpy_compile $PYFILE
