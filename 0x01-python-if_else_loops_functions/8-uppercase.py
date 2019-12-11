@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 def uppercase(str):
     for iterate in str:
-        if iterate >= 'a' and iterate <= 'z':
-            newstr = chr((ord(iterate) - 32))
-        else:
-            newstr = iterate
-        print("{}".format(newstr), end="")
-    print("{}".format(newstr))
+        if ord(iterate) >= 97 and ord(iterate) <= 122:
+            iterate = chr(ord(iterate) - 32)
+        print("{}".format(iterate), end="")
+    print()
