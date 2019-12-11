@@ -8,28 +8,32 @@ if number % 10 == 0:
 
 elif number < 0:
     """
-    1. if number is negative, change last digit back to negative
-    2. print statement for if last digit is less than 6 but not 0
-    3. print statement for if last digit is greater than 5
+    1. if number is negative, change number to positive
+    2. retrieve last digit of number
+    3. print statement for if last digit is less than 6 but not 0
+    4. print statement for if last digit is greater than 5
     """
     number = number * -1
     last = number % 10
+    number = number * -1
+    last = last * -1
     if last < 6:
         print("Last digit of", number, "is {:d} and is less than 6 and not 0\
-                ".format(last))
+".format(last))
     if last > 5:
         print("Last digit of", number, "is {:d} and is greater than 5\
-                ".format(last))
+".format(last))
+
 elif number > 0:
     """
-    1. if number is positive, do not use positive variable
+    1. if number is positive, retrieve last digit of number
     2. print statement for if last digit is less than 6 but not 0
     3. print statement for if last digit is greater than 5
     """
     last = number % 10
     if last < 6:
         print("Last digit of", number, "is {:d} and is less than 6 and not 0\
-                ".format(last))
+".format(last))
     if last > 5:
         print("Last digit of", number, "is {:d} and is greater than 5\
-                ".format(last))
+".format(last))
