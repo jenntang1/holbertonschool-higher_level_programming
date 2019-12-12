@@ -2,7 +2,7 @@
 The program contained in this directory is for learning and developing proficiency with Python, specifically with import and modules.  
 
 # General #
-0. Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))?
+0. Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))?  
 Python has a lot of functionality contained in external and standard libraries.  
 
 1. How to import functions from another file?  
@@ -103,7 +103,7 @@ args = parser.parse_args()
 0. Import a simple function from a simple file  
 Write a program that imports the function def add(a, b): from the file add\_0.py and prints the result of the addition 1 + 2 = 3.  
 
-1. My first toolbox! 
+1. My first toolbox!  
 Write a program that imports functions from the file calculator\_1.py, does some Maths, and prints the result.
 
 2. How to make a script dynamic!  
