@@ -8,8 +8,8 @@ The program codes contained in this directory is for learning and developing pro
 1. Why indentation is so important in Python?  
 Python implements a coding block style.  A block is a group of statements where indentation (whitespace) is used to distinguish it.  
 
-2. How to use the if, if ... else statements?  
-In Python, if/elif(else if)/else statements ends with **:**.  There could be an unlimited elif statements and else statements are optional.  
+2. How to use the **if**, **if ... else** statements?  
+In Python, **if/elif(else if)/else** statements ends with **:**.  There could be an unlimited **elif** statements and **else** statements are optional.  
 ![pythonifelifelse](https://i.imgur.com/sTFfg0i.png)
 
 3. How to use comments?  
@@ -23,8 +23,8 @@ A single line comment starts with **#** and is useful to explain variables, func
 A variable holds a value regardless of data type.  
 ![pythonvars](https://i.imgur.com/lBk0651.png)
 
-5. How to use the while and for loops?  
-The general idea of loop statements is that they will continue to execute as long as the stated condition is true.  The following are flow diagrams and examples to better visualize the implementation of while and for loop statements in Python.
+5. How to use the **while** and **for** loops?  
+The general idea of loop statements is that they will continue to execute as long as the stated condition is true.  The following are flow diagrams and examples to better visualize the implementation of **while** and **for** loop statements in Python.
 ![pythonwhile](https://i.imgur.com/VCGIKtA.png)
 ![pythonfor](https://i.imgur.com/G5CGauQ.png)
 
@@ -40,27 +40,39 @@ The following are the key differences.
 | 5.  | limited built-in functions                   | more built-in functions                     |
 | 6.  | faster program execution                     | slower program execution                    |
 
-7. How to use the break and continues statements?  
+7. How to use the **break** and **continues** statements?  
+They are used the same way as in C.  A **break** statement cancancels a loop and a **continue** statement skips an iteration.  
 
+8. How to use **else** clauses on loops?  
+```python
+while i < 6:
+	print(i)
+else:
+	print("idk")
+```
 
-8. How to use else clauses on loops?
+9. What does the **pass** statement do, and when to use it?
+It's used for syntax purpose.  It's a null operation, therefore, it doesn't execute anything when ran.  It's basically a placeholder in memory.  
 
-9. What does the pass statement do, and when to use it?
-
-10. How to use range?  
+10. How to use **range**?  
+The **range** function uses ASCII.  If using characters, then appy **ord** to convert it to ASCII.  
 
 11. What is a function and how do you use functions?  
+A function is a block of statements that takes an input, computes and produces an output.  Python has many built-in functions such as **print**, **return** and  **range**.  You could also create your own function by using **def** followed by a name and ().    
 
-12. What does return a function that does not use any return statement?  
+12. What does return a function that does not use any **return** statement?  
+By defining functions in other functions.  
+![pythonfuncs](https://i.imgur.com/LYETyrU.png)
 
 13. Scope of variables?  
 The part of a program code where a variable is accesible is the scope.  A variable defined at the top and visible throughout the program code is a global variable.  A variable defined inside a function and only used within it is a local variable.  
 ![pythonscopevars](https://i.imgur.com/PX9ZBb9.png)  
 
 14. What’s a traceback?  
+A traceback shows the path where an error is originated.  
 
 15. What are the arithmetic operators and how to use them?  
-
+![pythonarithmeticops](https://i.imgur.com/Jb122FX.png)
 
 # Quiz #  
 0. What do these lines print?  Holberton  
@@ -210,7 +222,16 @@ https://www.youtube.com/watch?v=1QXOd2ZQs-Q
 9. Tutorialspoint  
     https://www.tutorialspoint.com/index.htm  
 
-10. man python3  
+10. Basic Operators in Python  
+    https://www.geeksforgeeks.org/basic-operators-python/  
+
+11. Python - Functions  
+    https://www.tutorialspoint.com/python/python_functions.htm  
+
+12. How can a Python function return a function?  
+    https://www.tutorialspoint.com/How-can-a-Python-function-return-a-function  
+
+13. man python3  
 
 # Contributor(s) #  
 Jennifer Tang  
