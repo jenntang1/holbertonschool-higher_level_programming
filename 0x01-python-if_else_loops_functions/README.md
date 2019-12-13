@@ -9,7 +9,7 @@ The program codes contained in this directory is for learning and developing pro
 Python implements a coding block style.  A block is a group of statements where indentation (whitespace) is used to distinguish it.  
 
 2. How to use the **if**, **if ... else** statements?  
-In Python, **if/elif(else if)/else** statements ends with **:**.  There could be an unlimited **elif** statements and **else** statements are optional.  
+In Python, **if/elif(else if)/else** statements ends with ":".  There could be an unlimited **elif** statements and **else** statements are optional.  
 ![pythonifelifelse](https://i.imgur.com/sTFfg0i.png)
 
 3. How to use comments?  
@@ -46,12 +46,12 @@ They are used the same way as in C.  A **break** statement cancancels a loop and
 8. How to use **else** clauses on loops?  
 ```python
 while i < 6:
-	print(i)
+	print("{:d}".format()i)
 else:
 	print("idk")
 ```
 
-9. What does the **pass** statement do, and when to use it?
+9. What does the **pass** statement do, and when to use it?  
 It's used for syntax purpose.  It's a null operation, therefore, it doesn't execute anything when ran.  It's basically a placeholder in memory.  
 
 10. How to use **range**?  
