@@ -3,41 +3,40 @@ The program codes contained in this directory is to learn and develop proficienc
 
 # General #
 0. Why Python programming is awesome (don’t forget to tweet today, with the hashtag #pythoniscool :))?  
-
+Because of lists and tuples.  
 
 1. What are lists and how to use them?  
-
+Lists are arrays that could store any data types.  They could be indexed and sliced.  They are mutable - can be altered.  
 
 2. What are the differences and similarities between strings and lists?  
-
+Strings are made up of characters only but lists could be any data type.  They could both be manipulated through various ways, e.g., index and slice.  
 
 3. What are the most common methods of lists and how to use them?  
-
+![pythonlistmethods](https://i.imgur.com/Eu1la2t.png)
 
 4. How to use lists as stacks and queues?  
-
+When using list as a stack, an element is LIFO - last in, first out.  When using list as a queue, an element is FIFO - first in, first out.  
 
 5. What are list comprehensions and how to use them?  
-
+List comprehension is another way to create a list using square brackets.  
 
 6. What are tuples and how to use them?  
-
+A tuple contains values separated by commas.  They could be integers or characters.  They are immutable - can't be altered, therefore, a new variable needs to be created to store it.  
 
 7. When to use tuples versus lists?  
-
+Lists runs faster than tuples because they are smaller in size.  
 
 8. What is a sequence?  
-
+Sequence types are lists, tuples, strings and range.  
 
 9. What is tuple packing?  
-
+A tuple packing is when a value is placed into a new variable on the left hand side (the usual).  
 
 10. What is sequence unpacking?  
-
+A sequence unpacking is when a value is pulled back into a variable on the right hand side.  
 
 11. What is the del statement and how to use it?  
-
-
+A del statement removes an element from a list but doesn't return a value like pop does.  It could also be used to remove a variable.  
 
 # Quiz #
 0. What do these lines print?  1  
@@ -156,6 +155,15 @@ https://docs.python.org/3.4/tutorial/introduction.html#lists
 
 1. Learn to Program 6 : Lists  
 https://www.youtube.com/watch?v=A1HUzrvS-Pw  
+
+2. Python List Methods  
+https://www.programiz.com/python-programming/methods/list  
+
+3. Python List vs. Tuples  
+https://www.programiz.com/python-programming/list-vs-tuples  
+
+4. Python TUPLE - Pack, Unpack, Compare, Slicing, Delete, Key  
+https://www.guru99.com/python-tuples-tutorial-comparing-deleting-slicing-keys-unpacking.html#1  
 
 # Contributor(s) #
 Jennifer Tang  
