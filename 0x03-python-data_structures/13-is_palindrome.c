@@ -8,8 +8,8 @@
  * @node: node that includes the palindrome to check for
  * Description: 13. Linked list palindrome
  * Return: see below
- * 1. upon success, 0 if palindrome is found
- * 2. upon fail, 1 if palindrome is not found
+ * 1. upon success, 1 if it's a palindrome or empty list
+ * 2. upon fail, 0 if it isn't a palindrome
  */
 int is_helper(listint_t **head, listint_t *node)
 {
@@ -17,13 +17,13 @@ int is_helper(listint_t **head, listint_t *node)
 	listint_t *current = node;
 
 	if (head == NULL)
-		return (1);
+		return (0);
 	if (current == NULL)
 		return (1);
 	check1 = is_helper(head, current->next);
 	if (check1 == 0)
 		return (0);
-	check2 = (current->n = (*head)->n);
+	check2 = (current->n == (*head)->n);
 	*head = (*head)->next;
 	return (check2);
 }
