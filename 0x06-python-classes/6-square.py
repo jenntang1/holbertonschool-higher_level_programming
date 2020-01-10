@@ -88,11 +88,11 @@ class Square:
         if self.__size is 0:
             print()
         else:
+            for offset in range(self.__position[1]):
+                print()
             for row in range(self.__size):
-                if self.__position[0] >= 0:
-                    print(" ")
-                for col in range(self.__size):
-                    if self.__position[1] >= 0:
-                        print(" ")
+                for col1 in range(self.__position[0]):
+                    print(" ", end="")
+                for col2 in range(self.__size):
                     print("#", end="")
                 print()
