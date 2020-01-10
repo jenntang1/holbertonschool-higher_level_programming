@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 import math
+
+
 class MagicClass:
     """ Creating function that finds the area and circumference
-        Note:
-            Area = pi * r ** 2
-            Circumference = 2 * pi * r
+        Area = pi * r ** 2 and Circumference = 2 * pi * r
     """
     def __init__(self, radius=0):
         self.radius = 0
@@ -19,6 +19,3 @@ class MagicClass:
     def circumference(self):
         """ Circumference of circle """
         return (2 * math.pi) * self.__radius
-
-import dis
-dis.dis(MagicClass)
