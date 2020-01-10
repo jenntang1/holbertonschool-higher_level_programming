@@ -4,9 +4,9 @@
 
 class Square:
     """Creating a class called Square that defines a square. """
-    def __init__(my_square, size='0'):
+    def __init__(self, size=0):
         """Using the __init__ method.
         Args:
             size: private instance attribute for my_square
         """
-        my_square.__size = size
+        self.__size = size
