@@ -6,6 +6,7 @@ The program codes contained in this repository is to learn and understand Python
 OOP stands for Object Oriented Programming which is when data and functions are combined inside an object.  Often times, we could write programs the procedure-oriented way which is when functions are grouped in blocks to manipulate data.  We use OOP when we write large programs.  
 
 1. What is "first-class everything"?  
+Functions, classes, modules, methods and data types all have equal status and are treated the same way.  
 
 2. What is a class?  
 A class creates a new data type by using **class**.  
@@ -42,13 +43,14 @@ Data Abstraction is a combination of Data Encapsaulation and Information Hiding.
 A property is an attribute used to define a getter.  
 
 12. What is the difference between an attribute and a property in Python?  
-
+A property is a type of attribute.  
 
 13. What is the Pythonic way to write getters and setters in Python?  
 getters = @property  
 setters = @name.setter  
 
 14. How to dynamically create arbitrary new attributes for existing instances of a class?  
+https://stackoverflow.com/questions/2280334/shortest-way-of-creating-an-object-with-arbitrary-attributes-in-python  
 
 15. How to bind attributes to object and classes?  
 An object variable with the same name as the class variable hides the class variable.  
@@ -112,3 +114,90 @@ class User:
     def __init__(self, new_name=None):
         self.is_new = True
         if new_name is not None:
+        elf.name = new_name
+```
+
+4. What do these lines print?  True  
+```python
+>>> class User:
+>>>     id = 89
+>>>     name = "no name"
+>>>     __password = None
+>>>
+>>>     def __init__(self, new_name=None):
+>>>         self.is_new = True
+>>>         if new_name is not None:
+>>>             self.name = new_name
+>>> 
+>>> u = User()
+>>> u.is_new
+```
+
+5. What do these lines print?  89  
+```python
+>>> class User:
+>>>     id = 89
+>>>     name = "no name"
+>>>     __password = None
+>>>     
+>>>     def __init__(self, new_name=None):
+>>>         self.is_new = True
+>>>         if new_name is not None:
+>>>             self.name = new_name
+>>> 
+>>> u = User()
+>>> u.id
+```
+
+6. What do these lines print?  'John'  
+```python
+>>> class User:
+>>>     id = 89
+3. In this following code, what is is\_new?  A public instance attribute  
+```python
+class User:
+    id = 89
+    name = "no name"
+    __password = None
+
+    def __init__(self, new_name=None):
+        self.is_new = True
+        if new_name is not None:
+            self.name = new_name
+```
+
+7. What do these lines print?  'no name'  
+```python
+>>> class User:
+>>>     id = 89
+>>>     name = "no name"
+>>>     __password = None
+>>>     
+>>>     def __init__(self, new_name=None):
+>>>         self.is_new = True
+>>>         if new_name is not None:
+>>>             self.name = new_name
+>>> 
+>>> u = User()
+>>> u.name
+```
+
+# Resources #
+0. AB A Byte of Python  
+https://swaroop-c-h.gitbook.io/byte-of-python/  
+
+1. Python Course  
+https://www.python-course.eu/python3\_object\_oriented\_programming.php  
+https://www.python-course.eu/python3\_properties.php  
+
+2. Learn to Program 9 : Object Oriented Programming  
+https://www.youtube.com/watch?v=1AGyBuVCTeE&  
+
+3. Python Classes and Objects || Python Tutorial || Learn Python Programming  
+https://www.youtube.com/watch?v=apACNr7DC\_s  
+
+4. 8. Object Oriented Programming  
+https://www.youtube.com/watch?v=-DP1i2ZU9gk  
+
+# Contributor #
+Jennifer Tang  
