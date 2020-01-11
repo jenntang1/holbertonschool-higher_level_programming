@@ -195,7 +195,7 @@ https://www.youtube.com/watch?v=1AGyBuVCTeE&
 3. Python Classes and Objects || Python Tutorial || Learn Python Programming  
 https://www.youtube.com/watch?v=apACNr7DC\_s  
 
-4. 8. Object Oriented Programming  
+4. Object Oriented Programming  
 https://www.youtube.com/watch?v=-DP1i2ZU9gk  
 
 # Contributor #
