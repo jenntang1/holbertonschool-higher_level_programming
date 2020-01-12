@@ -1,0 +1,50 @@
+=============================================
+Testing Module for 2. Say my name
+=============================================
+
+This text file tests the say_my_name function
+that prints My name is <first name> <last name>.
+
+---------------------------------------------
+
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> say_my_name("Jennifer", "Tang")
+My name is Jennifer Tang
+
+>>> say_my_name("Jennifer     ", "Tang")
+My name is Jennifer      Tang
+
+>>> say_my_name("Jennifer", "     Tang")
+My name is Jennifer      Tang
+
+>>> say_my_name("Jennifer", "Tang.")
+My name is Jennifer Tang.
+
+>>> say_my_name("Jenn123", "456Tang")
+My name is Jenn123 456Tang
+
+>>> say_my_name(5, "Tang")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("Jennifer", 7)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name(None, "Tang")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("Jennifer", None)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
