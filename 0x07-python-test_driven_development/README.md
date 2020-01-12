@@ -151,13 +151,14 @@ def uniq(list):
             u_list.append(item)
     return u_list
 ```
-    - empty list  
-	- list with one element of any type  
-	- list with two difference elements of the same type  
-	- list with twice the same elements of the same type  
-	- list with more than two times the same elements of the same type  
-	- list with multiple types such as int, str, etc.  
-	- not a list argument such as passing a dictionary to the method  
+
+- empty list  
+- list with one element of any type  
+- list with two difference elements of the same type  
+- list with twice the same elements of the same type  
+- list with more than two times the same elements of the same type  
+- list with multiple types such as int, str, etc.  
+- not a list argument such as passing a dictionary to the method  
 
 # Resources #
 0. The Python Tutorial  
