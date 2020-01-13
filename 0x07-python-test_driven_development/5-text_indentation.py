@@ -17,6 +17,7 @@ def text_indentation(text):
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
     special = ".?:"
+    text = text.strip()
     for letter in text:
         match = False
         for symbol in special:
