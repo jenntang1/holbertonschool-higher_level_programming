@@ -1,0 +1,41 @@
+=====================================================
+Testing Module for 4. Text indentation
+=====================================================
+
+This text file tests the text_indentation function
+that prints a text with 2 new lines after ., ? and :.
+
+-----------------------------------------------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation([])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("Hello")
+Hello
+
+>>> text_indentation(3.55)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation("??")
+?
+<BLANKLINE>
+?
+<BLANKLINE>
+
+>>> text_indentation("     I love you.     ")
+I love you.
+<BLANKLINE>
+
+>>> text_indentation("I love you")
+I love you
