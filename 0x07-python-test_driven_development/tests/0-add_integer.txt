@@ -18,6 +18,14 @@ that adds two integers or floats.
 >>> add_integer(0, 0)
 0
 
+>>> add_integer(100)
+198
+
+>>> add_integer("a", "12a")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
 >>> add_integer(0, None)
 Traceback (most recent call last):
 ...
