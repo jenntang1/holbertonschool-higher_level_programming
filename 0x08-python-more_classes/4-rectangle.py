@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 3. String representation """
+""" 4. Eval is magic """
 
 
 class Rectangle:
@@ -74,7 +74,7 @@ class Rectangle:
         """ Using public instance method.
         Note:
             Area = 2w + 2h
-        Returns: 
+        Returns:
             If width or height is 0, return 0
             If width or height is not 0, return rectangluar perimeter
         """
