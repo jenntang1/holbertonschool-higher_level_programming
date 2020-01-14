@@ -37,5 +37,14 @@ TypeError: text must be a string
 I love you.
 <BLANKLINE>
 
+>>> text_indentation(": I love you? . I love you")
+:
+<BLANKLINE>
+I love you?
+<BLANKLINE>
+.
+<BLANKLINE>
+I love you
+
 >>> text_indentation("I love you")
 I love you
