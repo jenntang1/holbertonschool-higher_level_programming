@@ -16,8 +16,11 @@ def text_indentation(text):
     """
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
-    special = ".?:"
     text = text.strip()
+    text = text.replace('. ', '.')
+    text = text.replace('? ', '?')
+    text = text.replace(': ', ':')
+    special = ".?:"
     for letter in text:
         match = False
         for symbol in special:
@@ -25,6 +28,5 @@ def text_indentation(text):
                 match = True
                 print("{:s}".format(symbol))
                 print()
-                break
         if not match:
             print("{:s}".format(letter), end="")
