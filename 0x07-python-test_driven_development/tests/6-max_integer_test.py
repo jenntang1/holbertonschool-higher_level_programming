@@ -16,10 +16,20 @@ class TestMaxInteger(unittest.TestCase):
         my_list = {}
         self.assertEqual(max_integer(my_list), None)
 
-    def test_integers(self):
-        """ test for integers in list """
+    def test_type(self):
+        """ test for type error """
         my_list = ["a", 2, 3]
-        self.assertEqual(max_integer(my_list), 3)
+        self.assertRaises(TypeError, max_integer, my_list)
+
+    def test_unexpected(self):
+        """ test for unexpected result """
+        my_list = [0x0, -434223]
+        self.assertEqual(max_integer(my_list), 0)
+
+    def test_type2(self):
+        """ test for type error II """
+        my_list = [239487328423, {}]
+        self.assertRaises(TypeError, max_integer, my_list)
 
     def test_maxint(self):
         """ test for max integer in list """
@@ -40,6 +50,11 @@ class TestMaxInteger(unittest.TestCase):
         """ test for negatives """
         my_list = [-3, -4, 5]
         self.assertEqual(max_integer(my_list), 5)
+
+    def test_allnegatives(self):
+        """ test for all negatives """
+        my_list = [-3, -4, -2345]
+        self.assertEqual(max_integer(my_list), -3)
 
     def test_strings(self):
         """ test for strings """
@@ -65,6 +80,16 @@ class TestMaxInteger(unittest.TestCase):
         """ test for floats """
         my_list = [4.5, 5, 8.9]
         self.assertEqual(max_integer(my_list), 8.9)
+
+    def test_listnone(self):
+        """ test for a list that is None """
+        my_list = [None]
+        self.assertEqual(max_integer(my_list), None)
+
+    def test_strnone(self):
+        """ test for string that is None """
+        my_list = "None"
+        self.assertEqual(max_integer(my_list), "o")
 
 if __name__ == '__main__':
     unittest.main()
