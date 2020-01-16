@@ -48,3 +48,12 @@ I love you
 
 >>> text_indentation("I love you")
 I love you
+
+>>> text_indentation("I. love? you only: Nope")
+I.
+<BLANKLINE>
+love?
+<BLANKLINE>
+you only:
+<BLANKLINE>
+Nope
