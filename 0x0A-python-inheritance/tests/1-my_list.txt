@@ -1,0 +1,41 @@
+=============================================
+Testing Module for 1. My list
+=============================================
+
+This text file tests the MyList class
+that prints a list in ascending order.
+
+---------------------------------------------
+
+>>> MyList = __import__('1-my_list').MyList
+
+>>> MyList([1, 2, 3])
+[1, 2, 3]
+
+>>> MyList([1, 1, 2.3])
+[1, 1, 2.3]
+
+>>> MyList([0])
+[0]
+
+>>> MyList([-10, 1, 2, 0, 5])
+[-10, 1, 2, 0, 5]
+
+>>> MyList(["a", "12a"])
+['a', '12a']
+
+>>> MyList([])
+[]
+
+>>> MyList(0)
+Traceback (most recent call last):
+...
+TypeError: 'int' object is not iterable
+
+>>> MyList(None)
+Traceback (most recent call last):
+...
+TypeError: 'NoneType' object is not iterable
+
+>>> MyList()
+[]

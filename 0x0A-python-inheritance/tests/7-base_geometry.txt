@@ -1,0 +1,75 @@
+=============================================
+Testing Module for 7. Integer validator
+=============================================
+
+This text file tests the BaseGeometry class
+that validates a value.
+
+---------------------------------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> BaseGeometry(1, 2)
+3
+
+>>> BaseGeometry(1.2, 2.3)
+3
+
+>>> BaseGeometry(0, 0)
+0
+
+>>> BaseGeometry(100)
+198
+
+>>> BaseGeometry("a", "12a")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> BaseGeometry(0, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> BaseGeometry(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> BaseGeometry(9324820938442, 3294823.923493)
+9324824233265
+
+>>> BaseGeometry("Holberton", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> BaseGeometry(1, "School")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> BaseGeometry("New Haven", 4.7)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> BaseGeometry(4.7, "District")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>> BaseGeometry("Holberton", "School")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> BaseGeometry(float("inf"))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+>>> BaseGeometry(float("nan"))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
