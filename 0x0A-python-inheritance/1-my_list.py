@@ -8,5 +8,8 @@ class MyList(list):
         list: superclass
     """
     def print_sorted(self):
-        """ Creating a public instance method. """
+        """ Creating a public instance method.
+        Note:
+            Prints a sorted list
+        """
         print(sorted(self))
