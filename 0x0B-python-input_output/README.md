@@ -42,6 +42,7 @@ Use the close built-in function to close a file.  In the following example, f is
 ```
 
 6. What is and how to use the with statement?  
+The with statement opens, reads and closes a file object.  
 
 7. What is JSON?  
 JSON stands for JaveScript Object Notation and it's a module that converts Python data hierarchies to string representations.  This process deconstructs and it's called serialization.  If reconstructing (string representations to data hierarchies) then, it's called deserialization.  
