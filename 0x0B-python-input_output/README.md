@@ -1,5 +1,5 @@
 # Overview #
-The program codes contained in this directory is to help in learning and understanding Python, specifically with input/output.  
+The program codes contained in this directory is for learning and understanding Python, specifically with input/output.  
 
 # General #
 0. How to open a file?  
