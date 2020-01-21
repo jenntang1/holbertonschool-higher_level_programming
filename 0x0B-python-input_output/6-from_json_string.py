@@ -5,8 +5,6 @@
 def from_json_string(my_str):
     """ Creating a function that returns an object
     represented by a JSON string.
-    Note:
-        The with keyword opens, reads and closes a file
     Args:
         my_str: string to decode from JSON
     Returns:
