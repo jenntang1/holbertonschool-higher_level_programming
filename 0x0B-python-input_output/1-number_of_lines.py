@@ -6,7 +6,7 @@ def number_of_lines(filename=""):
     """ Creating a function that returns the number of lines
     of a text file.
     Note:
-        The with keyword opens, reads and closes a file
+        The with statement opens, reads and closes a file
     Args:
         filename: name of text file
     Returns:

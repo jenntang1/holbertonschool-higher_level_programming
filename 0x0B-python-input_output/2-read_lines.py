@@ -6,7 +6,7 @@ def read_lines(filename="", nb_lines=0):
     """ Creating a function that reads n lines of
     a text file and prints to stdout.
     Note:
-        The with keyword opens, reads and closes a file
+        The with statement opens, reads and closes a file
     Args:
         filename: name of text file
         nb_lines: number of lines to read

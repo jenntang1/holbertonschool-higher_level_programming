@@ -6,7 +6,7 @@ def write_file(filename="", text=""):
     """ Creating a function that writes a string to a text file
     and returns the number of characters written.
     Note:
-        The with keyword opens, reads and closes a file
+        The with statement opens, reads and closes a file
     Args:
         filename: name of text file
         text: string to be written
