@@ -14,7 +14,7 @@ Use the write built-in function to write to a file or use open with the w mode. 
 
 ```python
 >>> f.write('Hello World\n')
->>> f = open(filename, w)
+>>> f = open(filename, 'w')
 ```
 
 2. How to read the full content of a file?  
