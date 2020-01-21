@@ -6,7 +6,7 @@ def read_file(filename=""):
     """ Creating a function that reads a text file and
     prints to stdout.
     Note:
-        The with keyword opens, reads and closes a file
+        The with statement opens, reads and closes a file
     Args:
         filename: name of text file
     """
