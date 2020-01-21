@@ -1,0 +1,14 @@
+#!/usr/bin/python3
+def read_file(filename=""):
+    """ Creating a function that reads a text file and
+    prints to stdout.
+    Note:
+        First, open file and then, read from it
+    Args:
+        filename: name of text file
+    """
+    text_content = ""
+    with open(filename) as file_obj:
+        for text_line in file_obj.readlines():
+            text_content += text_line
+        print("{}".format(text_content))
