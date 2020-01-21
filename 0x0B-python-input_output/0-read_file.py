@@ -14,4 +14,4 @@ def read_file(filename=""):
     with open(filename) as file_obj:
         for text_line in file_obj.readlines():
             text_content += text_line
-        print("{}".format(text_content))
+        print("{}".format(text_content), end="")
