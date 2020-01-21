@@ -1,9 +1,13 @@
 #!/usr/bin/python3
+""" 1. Number of lines """
+
+
 def number_of_lines(filename=""):
     """ Creating a function that returns the number of lines
     of a text file.
     Note:
-        First, open file and then, read from it
+        The with keyword first opens the file.
+        Next, reads from it and finally, closes it.
     Args:
         filename: name of text file
     Returns:

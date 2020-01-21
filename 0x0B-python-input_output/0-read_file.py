@@ -1,9 +1,13 @@
 #!/usr/bin/python3
+""" 0. Read file """
+
+
 def read_file(filename=""):
     """ Creating a function that reads a text file and
     prints to stdout.
     Note:
-        First, open file and then, read from it
+        The with keyword first opens the file.
+        Next, reads from it and finally, closes it.
     Args:
         filename: name of text file
     """
