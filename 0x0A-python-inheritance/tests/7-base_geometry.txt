@@ -61,3 +61,38 @@ NameError: name 'b' is not defined
 Traceback (most recent call last):
 ...
 NameError: name 'b' is not defined
+
+>>> b.area()
+Traceback (most recent call last):
+...
+NameError: name 'b' is not defined
+
+>>> b.integer_validator("age", "4")
+Traceback (most recent call last):
+...
+NameError: name 'b' is not defined
+
+>>> b.integer_validator("age", (4,))
+Traceback (most recent call last):
+...
+NameError: name 'b' is not defined
+
+>>> b.integer_validator("age", True)
+Traceback (most recent call last):
+...
+NameError: name 'b' is not defined
+
+>>> b.integer_validator("age", {3, 4})
+Traceback (most recent call last):
+...
+NameError: name 'b' is not defined
+
+>>> b.integer_validator(area())
+Traceback (most recent call last):
+...
+NameError: name 'b' is not defined
+
+>>> b.integer_validator("age", None)
+Traceback (most recent call last):
+...
+NameError: name 'b' is not defined
