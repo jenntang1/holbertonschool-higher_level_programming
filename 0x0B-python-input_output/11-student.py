@@ -18,7 +18,7 @@ class Student:
 
     def to_json(self):
         """ Creating a public instance method.
-        Note:
-            Retrieves a dict representation of a Student instance
+        Returns:
+            A dict representation of a Student instance
         """
         return (self.__dict__)
