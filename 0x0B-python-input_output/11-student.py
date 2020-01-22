@@ -21,4 +21,4 @@ class Student:
         Returns:
             A dict representation of a Student instance
         """
-        return (self.__dict__)
+        return self.__dict__
