@@ -9,6 +9,8 @@ that prints a list in ascending order.
 
 >>> MyList = __import__('1-my_list').MyList
 
+>>> my_list = MyList()
+
 >>> MyList([1, 2, 3])
 [1, 2, 3]
 
@@ -37,13 +39,14 @@ Traceback (most recent call last):
 ...
 TypeError: 'NoneType' object is not iterable
 
->>> MyList()
+>>> my_list = MyList([-5, -3, -6, -2, -4, -1])
+>>> my_list.print_sorted()
+[-6, -5, -4, -3, -2, -1]
+
+>>> my_list = MyList([])
+>>> my_list.print_sorted()
 []
 
->>> MyList().append(5)
-
-
->>> MyList().printed_sorted()
-Traceback (most recent call last):
-...
-AttributeError: 'MyList' object has no attribute 'printed_sorted'
+>>> my_list = MyList([None])
+>>> my_list.print_sorted()
+[None]
