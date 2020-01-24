@@ -39,6 +39,11 @@ Traceback (most recent call last):
 ...
 TypeError: 'NoneType' object is not iterable
 
+>>> my_list.append()
+Traceback (most recent call last):
+...
+TypeError: append() takes exactly one argument (0 given)
+
 >>> my_list = MyList([-5, -3, -6, -2, -4, -1])
 >>> my_list.print_sorted()
 [-6, -5, -4, -3, -2, -1]
@@ -50,3 +55,7 @@ TypeError: 'NoneType' object is not iterable
 >>> my_list = MyList([None])
 >>> my_list.print_sorted()
 [None]
+
+>>> my_list = MyList([10, 1, 2, 5,])
+>>> my_list.print_sorted()
+[1, 2, 5, 10]
