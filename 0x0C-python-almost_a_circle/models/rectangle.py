@@ -142,8 +142,12 @@ class Rectangle(Base):
         Note:
             Prints to stdout the Rectangle using #
         """
-        for row in range(self.__height):
-            for col in range(self.__width):
+        for no_post in range(self.y):
+            print()
+        for row in range(self.height):
+            for post in range(self.x):
+                print(" ", end="")
+            for col in range(self.width):
                 print("#", end="")
             print()
 
@@ -157,3 +161,16 @@ class Rectangle(Base):
                                                        self.y,
                                                        self.width,
                                                        self.height))
+
+    def update(self, *args):
+        """ Creating public instance method.
+        Note:
+            Assigns each attribute a positional argument.
+        Args:
+            *args: id, width, height, x, y in this order
+        """
+        self.id += args[0]
+        self.width += args[1]
+        self.height += args[2]
+        self.x += args[3]
+        self.y += args[4]
