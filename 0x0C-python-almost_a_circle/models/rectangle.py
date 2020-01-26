@@ -156,11 +156,13 @@ class Rectangle(Base):
         Returns:
             String representation of the Rectangle
         """
-        return("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
-                                                       self.x,
-                                                       self.y,
-                                                       self.width,
-                                                       self.height))
+        class_name = Rectangle.__name__
+        return("[{}] ({}) {}/{} - {}/{}".format(class_name,
+                                                self.id,
+                                                self.x,
+                                                self.y,
+                                                self.width,
+                                                self.height))
 
     def update(self, *args, **kwargs):
         """ Creating public instance method.
