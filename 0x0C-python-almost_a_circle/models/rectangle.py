@@ -169,8 +169,14 @@ class Rectangle(Base):
         Args:
             *args: id, width, height, x, y in this order
         """
-        self.id += args[0]
-        self.width += args[1]
-        self.height += args[2]
-        self.x += args[3]
-        self.y += args[4]
+        for iterate, arg in enumerate(args):
+            if iterate is 0:
+                self.id = arg
+            if iterate is 1:
+                self.width = arg
+            if iterate is 2:
+                self.height = arg
+            if iterate is 3:
+                self.x = arg
+            if iterate is 4:
+                self.y = arg
