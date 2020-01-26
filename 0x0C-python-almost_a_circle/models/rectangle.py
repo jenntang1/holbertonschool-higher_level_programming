@@ -9,7 +9,7 @@
 8. Update #0
 9. Update #1
 
-Import base class
+Importing base class
 """
 from models.base import Base
 
@@ -162,21 +162,29 @@ class Rectangle(Base):
                                                        self.width,
                                                        self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Creating public instance method.
         Note:
-            Assigns each attribute a positional argument.
+            Assigns a key/value argument to the attributes
         Args:
             *args: id, width, height, x, y in this order
+            **kwargs: id, width, height, x, y in no order
         """
-        for iterate, arg in enumerate(args):
-            if iterate is 0:
-                self.id = arg
-            if iterate is 1:
-                self.width = arg
-            if iterate is 2:
-                self.height = arg
-            if iterate is 3:
-                self.x = arg
-            if iterate is 4:
-                self.y = arg
+        if (len(args) > 0) and (args is not None):
+            for post, arg in enumerate(args):
+                if post is 0:
+                    self.id = arg
+                if post is 1:
+                    self.width = arg
+                if post is 2:
+                    self.height = arg
+                if post is 3:
+                    self.x = arg
+                if post is 4:
+                    self.y = arg
+        else:
+            self.id = kwargs.get("id", self.id)
+            self.width = kwargs.get("width", self.width)
+            self.height = kwargs.get("height", self.height)
+            self.x = kwargs.get("x", self.x)
+            self.y = kwargs.get("y", self.y)
