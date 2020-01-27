@@ -14,7 +14,13 @@ class MyTest(unittest.TestCase):
 
     def test_type(self):
         """ Check type is int """
-        self.assertIsInstance(self.id, int)
+        test = Base(3)
+        self.assertIsInstance(test.id, int)
+
+    def test_str(self):
+        """ Check type is not str """
+        test = Base("string")
+        self.assertIsInstance(test.id, str)
 
 if __name__ == "__main__":
     unittest.main()
