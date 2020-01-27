@@ -24,8 +24,8 @@ class Square(Rectangle):
             y: inherited attribute
             id: inherited attribute
         """
-        super().__init__(size, size, x, y, id)
         self.size = size
+        super().__init__(size, size, x, y, id)
 
     def __str__(self):
         """ Using __str__ method.
@@ -61,3 +61,35 @@ class Square(Rectangle):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__size = value
+
+    def update(self, *args, **kwargs):
+        """ Creating public instance method.
+        Note:
+            Assigns a key/value argument to the attributes
+        Args:
+            *args: id, width, height, x, y in this order
+            **kwargs: id, width, height, x, y in no order
+        """
+        if (len(args) > 0) and (args is not None):
+            for post, arg in enumerate(args):
+                if post is 0:
+                    self.id = arg
+                if post is 1:
+                    self.width = arg
+                if post is 2:
+                    self.height = arg
+                if post is 3:
+                    self.x = arg
+                if post is 4:
+                    self.y = arg
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
