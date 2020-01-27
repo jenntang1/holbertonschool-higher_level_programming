@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ 1. Base class """
+import json
 
 
 class Base:
@@ -29,15 +30,30 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """ Creating JSON string representation method.
+        """ Creating JSON string representation static method.
         Args:
             list_dictionaries: list of dictionaries
         Returns:
             If None or empty, return "[]"
             If not None or empty, return JSON str rep
         """
-        import json
         if list_dictionaries is None:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """ Creating JSON save to file class method.
+        Note:
+            If None or empty, save to an empty list
+            If not None or empty, save to JSON file
+        Args:
+            cls: class Base
+            list_objs: list of instances inherited from Base
+        """
+        import json
+        if list_objs is None:
+            my_list = [list_objs]
+        else:
+            to_json_string(list_objs)
