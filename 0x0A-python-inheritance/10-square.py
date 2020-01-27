@@ -86,19 +86,6 @@ class Square(Rectangle):
         Args:
             size: private attribute that's a positive integer
         """
-        self.integer_validator("size", size)
+        super().__init__(size, size)
+        super().integer_validator("size", size)
         self.__size = size
-
-    def area(self):
-        """ Implementing the area method.
-        Returns:
-            The area of the Square
-        """
-        return self.__size * self.__size
-
-    def __str__(self):
-        """ Using the __str__ method.
-        Returns:
-            Description of the Square
-        """
-        return("[Rectangle] {}/{}".format(self.__size, self.__size))
