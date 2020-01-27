@@ -75,12 +75,10 @@ class Square(Rectangle):
                 if post is 0:
                     self.id = arg
                 if post is 1:
-                    self.width = arg
+                    self.size = arg
                 if post is 2:
-                    self.height = arg
-                if post is 3:
                     self.x = arg
-                if post is 4:
+                if post is 3:
                     self.y = arg
         else:
             if "id" in kwargs:
