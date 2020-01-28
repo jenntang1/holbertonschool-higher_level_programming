@@ -58,7 +58,7 @@ class Base:
             my_list = []
             for objs in list_objs:
                 my_list.append(objs.to_dictionary())
-            with open("{}.json".format(cls.__name__), 'w') as file_obj:
+            with open("{}.json".format(cls.__name__), 'r+') as file_obj:
                 file_obj.write(cls.to_json_string(my_list))
 
     @staticmethod
