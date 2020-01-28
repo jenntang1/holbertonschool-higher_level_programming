@@ -1,6 +1,14 @@
 #!/usr/bin/python3
-""" 1. Base class """
+"""
+1. Base class
+15. Dictionary to JSON string
+16. JSON string to file
+17. JSON string to dictionary
+18. Dictionary to Instance
+19. File to instances
+"""
 import json
+from os import path
 
 
 class Base:
@@ -49,7 +57,7 @@ class Base:
             If None or empty, save to an empty list
             If not None or empty, save to JSON file
         Args:
-            cls: class Base
+            cls: Rectangle or Square
             list_objs: list of instances inherited from Base
         """
         my_list = []
@@ -72,3 +80,45 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ Creating a dummy instance class method.
+        Note:
+            In order to use the update method,
+            the create method must be created first.
+        Args:
+            cls: Rectangle or Square
+            dictionary: kwargs
+        Return:
+            instance with all attributes already set
+        """
+        if cls.__name__ is "Rectangle":
+            dummy = cls(1, 2)
+        elif cls.__name__ is "Square":
+            dummy = cls(1)
+        else:
+            return None
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """ Creating class method.
+        Args:
+            cls: current class in this method
+        Returns:
+            If file doesn't exist, return empty list
+            If file exists, return list of instances
+        """
+        new_list = []
+        if path.exists("{}.json".format(cls.__name__)):
+            with open("{}.json".format(cls.__name__), 'r') as file_obj:
+                new_list = cls.from_json_string(file_obj.read())
+                instance_list = []
+                for dicts in new_list:
+                    instance = cls.create(**dicts)
+                    instance_list.append(instance)
+                return instance_list
+        else:
+            return []
