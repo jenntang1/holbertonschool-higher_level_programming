@@ -52,14 +52,12 @@ class Base:
             cls: class Base
             list_objs: list of instances inherited from Base
         """
-        if list_objs is None:
-            list_objs = []
-        else:
-            my_list = []
+        my_list = []
+        if list_objs is not None:
             for objs in list_objs:
                 my_list.append(objs.to_dictionary())
-            with open("{}.json".format(cls.__name__), 'r+') as file_obj:
-                file_obj.write(cls.to_json_string(my_list))
+        with open("{}.json".format(cls.__name__), 'w') as file_obj:
+            file_obj.write(cls.to_json_string(my_list))
 
     @staticmethod
     def from_json_string(json_string):
