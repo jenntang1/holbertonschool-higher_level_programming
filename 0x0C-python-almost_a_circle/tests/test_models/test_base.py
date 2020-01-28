@@ -12,15 +12,20 @@ class MyTest(unittest.TestCase):
     def setUp(self):
         self.id = 1
 
-    def test_type(self):
-        """ Check type is int """
+    def test_int(self):
+        """ Check id is int """
         test = Base(3)
-        self.assertIsInstance(test.id, int)
+        self.assertEqual(test.id, 3)
 
     def test_str(self):
         """ Check type is not str """
         test = Base("string")
         self.assertIsInstance(test.id, str)
+
+    def test_None(self):
+        """ Check for None """
+        test = Base(None)
+        self.assertIsNotNone(test.id)
 
 if __name__ == "__main__":
     unittest.main()
