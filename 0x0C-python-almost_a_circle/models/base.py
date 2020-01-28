@@ -52,8 +52,25 @@ class Base:
             cls: class Base
             list_objs: list of instances inherited from Base
         """
-        import json
         if list_objs is None:
-            my_list = [list_objs]
+            list_objs = []
         else:
-            to_json_string(list_objs)
+            my_list = []
+            for objs in list_objs:
+                my_list.append(objs.to_dictionary())
+            with open("{}.json".format(cls.__name__), 'w') as file_obj:
+                file_obj.write(cls.to_json_string(my_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ Creating JSON string from dictionary static method.
+        Args:
+            json_string: string representing a list of dictionaries
+        Returns:
+            If None or empty, return empty list
+            If not None or empty, return the list
+        """
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
