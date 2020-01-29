@@ -38,19 +38,53 @@ class MyTest(unittest.TestCase):
 
     def test_raise_one(self):
         """ Checking width TypeError """
-        self.assertRaises(TypeError, Rectangle, ("1", 2))
+        with self.assertRaises(TypeError):
+            Rectangle("1", 2)
 
     def test_raise_two(self):
         """ Checking height TypeError """
-        self.assertRaises(TypeError, Rectangle, (1, "2"))
+        with self.assertRaises(TypeError):
+            Rectangle(1, "2")
 
     def test_raise_three(self):
         """ Checking x TypeError """
-        self.assertRaises(TypeError, Rectangle, (1, 2, "3"))
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, "3")
 
     def test_raise_four(self):
         """ Checking y TypeError """
-        self.assertRaises(TypeError, Rectangle, (1, 2, 3, "4"))
+        with self.assertRaises(TypeError):
+            Rectangle(1, 2, 3, "4")
+
+    def test_raise_five(self):
+        """ Checking width ValueError """
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 2)
+
+    def test_raise_six(self):
+        """ Checking height ValueError """
+        with self.assertRaises(ValueError):
+            Rectangle(1, -2)
+
+    def test_raise_seven(self):
+        """ Checking width ValueError """
+        with self.assertRaises(ValueError):
+            Rectangle(0, 2)
+
+    def test_raise_eight(self):
+        """ Checking height ValueError """
+        with self.assertRaises(ValueError):
+            Rectangle(1, 0)
+
+    def test_raise_nine(self):
+        """ Checking x ValueError """
+        with self.assertRaises(ValueError):
+            Rectangle(1, 2, -3)
+
+    def test_raise_eight(self):
+        """ Checking y ValueError """
+        with self.assertRaises(ValueError):
+            Rectangle(1, 2, 3, -4)
 
 if __name__ == "__main__":
     unittest.main()
