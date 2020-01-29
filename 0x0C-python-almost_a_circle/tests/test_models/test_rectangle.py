@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ 0. If it's not tested it doesn't work """
 from models.rectangle import Rectangle
+from models.base import Base
 import unittest
 import os
 
@@ -9,12 +10,16 @@ class MyTest(unittest.TestCase):
     """ Creating class to test Rectangle class. """
 
     def setUp(self):
-        """ Defaults """
+        """
+        Defaults
+        name mangling __nb_objects
+        """
         self.width = 1
         self.height = 1
         self.x = 1
         self.y = 1
         self.id = 1
+        Base._Base__nb_objects = 0
 
     def test_all(self):
         """ Checking all attributes """
@@ -81,10 +86,22 @@ class MyTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(1, 2, -3)
 
-    def test_raise_eight(self):
+    def test_raise_ten(self):
         """ Checking y ValueError """
         with self.assertRaises(ValueError):
             Rectangle(1, 2, 3, -4)
+
+    def test_area(self):
+        """ Checking area exists """
+        rect = Rectangle(3, 2)
+        test = rect.area()
+        self.assertEqual(test, 6)
+
+    def test_str_method(self):
+        """ Checking __str__ method """
+        rect = Rectangle(5, 5, 1)
+        test = rect.__str__()
+        self.assertEqual(test, "[Rectangle] (1) 1/0 - 5/5")
 
 if __name__ == "__main__":
     unittest.main()
