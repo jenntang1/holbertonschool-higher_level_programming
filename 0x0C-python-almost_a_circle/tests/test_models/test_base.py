@@ -14,12 +14,17 @@ class MyTest(unittest.TestCase):
         """ Default """
         Base.__nb_objects = 1
 
+    def test_id(self):
+        """ Checking that an id is assigned """
+        test = Base()
+        self.assertEqual(test.id, 1)
+
     def test_int(self):
         """ Saving id """
         test = Base(3)
         self.assertEqual(test.id, 3)
 
-    def test_plusone(self):
+    def test_plus_one(self):
         """ Saving id + 1 """
         test = Base(+ 1)
         self.assertEqual(test.id, 1)
