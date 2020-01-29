@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """ 0. If it's not tested it doesn't work """
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 import unittest
-import random
 import os
 
 
@@ -10,22 +11,48 @@ class MyTest(unittest.TestCase):
     """ Creating class to test base class. """
 
     def setUp(self):
-        self.id = 1
+        """ Default """
+        Base.__nb_objects = 1
 
     def test_int(self):
-        """ Check id is int """
+        """ Saving id """
         test = Base(3)
         self.assertEqual(test.id, 3)
 
-    def test_str(self):
-        """ Check type is not str """
-        test = Base("string")
-        self.assertIsInstance(test.id, str)
+    def test_plusone(self):
+        """ Saving id + 1 """
+        test = Base(+ 1)
+        self.assertEqual(test.id, 1)
 
-    def test_None(self):
-        """ Check for None """
-        test = Base(None)
-        self.assertIsNotNone(test.id)
+    def test_to_json_None(self):
+        """ Checking to_json_string is None """
+        test = Base.to_json_string(None)
+        self.assertEqual(test, "[]")
+
+    def test_to_json_empty(self):
+        """ Checking to_json_string is empty """
+        test = Base.to_json_string([])
+        self.assertEqual(test, "[]")
+
+    def test_to_json_works(self):
+        """ Checking to_json_string works """
+        test = Base.to_json_string([{'id': 12}])
+        self.assertEqual(test, '[{"id": 12}]')
+
+    def test_from_json_None(self):
+        """ Checking from_json_string is None """
+        test = Base.from_json_string(None)
+        self.assertEqual(test, [])
+
+    def test_from_json_empty(self):
+        """ Checking from_json_string is empty """
+        test = Base.from_json_string("[]")
+        self.assertEqual(test, [])
+
+    def test_from_json_works(self):
+        """ Checking from_json_string works """
+        test = Base.from_json_string('[{"id": 89}]')
+        self.assertEqual(test, [{"id": 89}])
 
 if __name__ == "__main__":
     unittest.main()
