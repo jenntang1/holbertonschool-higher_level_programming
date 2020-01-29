@@ -39,6 +39,11 @@ class MyTest(unittest.TestCase):
         test = Base.to_json_string([{'id': 12}])
         self.assertEqual(test, '[{"id": 12}]')
 
+    def test_to_json_returns(self):
+        """ Checking to_json_string returns """
+        test = Base.to_json_string([{'id': 12}])
+        self.assertIs(type(test), str)
+
     def test_from_json_None(self):
         """ Checking from_json_string is None """
         test = Base.from_json_string(None)
@@ -53,6 +58,11 @@ class MyTest(unittest.TestCase):
         """ Checking from_json_string works """
         test = Base.from_json_string('[{"id": 89}]')
         self.assertEqual(test, [{"id": 89}])
+
+    def test_from_json_returns(self):
+        """ Checking from_json_string returns """
+        test = Base.from_json_string('[{"id": 89}]')
+        self.assertIs(type(test), list)
 
 if __name__ == "__main__":
     unittest.main()
