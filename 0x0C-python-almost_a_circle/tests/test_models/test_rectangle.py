@@ -103,5 +103,79 @@ class MyTest(unittest.TestCase):
         test = rect.__str__()
         self.assertEqual(test, "[Rectangle] (1) 1/0 - 5/5")
 
+    def test_to_dict(self):
+        """ Checking return of a dict repr """
+        rect = Rectangle(10, 2, 1, 9)
+        test = rect.to_dictionary()
+        self.assertEqual(test,
+                         {'id': 1, 'width': 10, 'height': 2, 'x': 1, 'y': 9})
+
+    def test_update_args_exists(self):
+        """ Checking update method for *args exists """
+        rect = Rectangle(1, 5, 5, 5, 5)
+        test = rect.update()
+        self.assertEqual(test, None)
+
+    def test_update_args_one(self):
+        """ Checking update method for *args with one arg """
+        rect = Rectangle(1, 5, 5, 5, 5)
+        test = rect.update(89)
+        self.assertEqual(test, None)
+
+    def test_update_args_two(self):
+        """ Checking update method for *args with two args """
+        rect = Rectangle(1, 5, 5, 5, 5)
+        test = rect.update(89, 1)
+        self.assertEqual(test, None)
+
+    def test_update_args_three(self):
+        """ Checking update method for *args with three args """
+        rect = Rectangle(1, 5, 5, 5, 5)
+        test = rect.update(89, 1, 2)
+        self.assertEqual(test, None)
+
+    def test_update_args_four(self):
+        """ Checking update method for *args with four args """
+        rect = Rectangle(1, 5, 5, 5, 5)
+        test = rect.update(89, 1, 2, 3)
+        self.assertEqual(test, None)
+
+    def test_update_args_five(self):
+        """ Checking update method for *args with five args """
+        rect = Rectangle(1, 5, 5, 5, 5)
+        test = rect.update(89, 1, 2, 3, 4)
+        self.assertEqual(test, None)
+
+    def test_update_kwargs_exists(self):
+        """ Checking update method for **kwargs exists """
+        rect = Rectangle(id=5, width=5, height=5, x=5, y=5)
+        test = rect.update(**{'id': 89})
+        self.assertEqual(test, None)
+
+    def test_update_kwargs_one(self):
+        """ Checking update method for **kwargs with one arg """
+        rect = Rectangle(id=5, width=5, height=5, x=5, y=5)
+        test = rect.update(**{'id': 89, 'width': 1})
+        self.assertEqual(test, None)
+
+    def test_update_kwargs_two(self):
+        """ Checking update method for **kwargs with two args """
+        rect = Rectangle(id=5, width=5, height=5, x=5, y=5)
+        test = rect.update(**{'id': 89, 'width': 1, 'height': 2})
+        self.assertEqual(test, None)
+
+    def test_update_kwargs_three(self):
+        """ Checking update method for **kwargs with three args """
+        rect = Rectangle(id=5, width=5, height=5, x=5, y=5)
+        test = rect.update(**{'id': 89, 'width': 1, 'height': 2, 'x': 3})
+        self.assertEqual(test, None)
+
+    def test_update_kwargs_four(self):
+        """ Checking update method for **kwargs with four args """
+        rect = Rectangle(id=5, width=5, height=5, x=5, y=5)
+        test = rect.update(
+                **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
+        self.assertEqual(test, None)
+
 if __name__ == "__main__":
     unittest.main()
