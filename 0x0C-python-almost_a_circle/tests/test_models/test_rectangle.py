@@ -177,5 +177,15 @@ class MyTest(unittest.TestCase):
                 **{'id': 89, 'width': 1, 'height': 2, 'x': 3, 'y': 4})
         self.assertEqual(test, None)
 
+    def test_save_empty(self):
+        """ Checking save_to_file method when empty list is passed in """
+        test = Rectangle.save_to_file([])
+        self.assertEqual(test, None)
+
+    def test_save_works(self):
+        """ Checking save_to_file method when list is passed in """
+        test = Rectangle.save_to_file([Rectangle(1, 2)])
+        self.assertEqual(test, None)
+
 if __name__ == "__main__":
     unittest.main()
