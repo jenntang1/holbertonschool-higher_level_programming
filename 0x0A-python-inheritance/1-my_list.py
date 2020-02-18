@@ -12,4 +12,5 @@ class MyList(list):
         Note:
             Prints a sorted list
         """
-        print(sorted(self))
+        new_list = list.copy(self)
+        print(sorted(new_list))
