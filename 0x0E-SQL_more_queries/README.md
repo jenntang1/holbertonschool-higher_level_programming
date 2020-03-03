@@ -1,7 +1,7 @@
-## Overview ##
+# Overview #
 The program codes contained in this directory is to help learn and understand SQL.  
 
-# General #
+## General ##
 0. How to create a new MySQL user?  
 ```sql
 CREATE USER newuser@localhost IDENTIFIED BY password;
@@ -44,7 +44,7 @@ By implementing multiple joins and the distinct keyword techniques, we could ret
 6. What are JOIN and UNION?  
 JOIN allows retrieval of data from two separate tables.  UNION allows the retrieved data to be combined into a new table.  
 
-# Resources #
+## Resources ##
 0. How To Create a New User and Grant Permissions in MySQL  
 https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql  
 
@@ -72,5 +72,5 @@ https://www.sqlstyle.guide
 8. MySQL Documentation  
 https://dev.mysql.com/doc/refman/5.7/en/sql-statements.html  
 
-# Contributor #
+## Contributor ##
 Jennifer Tang  
