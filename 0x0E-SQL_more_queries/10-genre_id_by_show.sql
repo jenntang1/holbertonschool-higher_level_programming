@@ -1,4 +1,7 @@
 -- Lists data given one requirement.
 SELECT tv_shows.title, tv_show_genres.genre_id
-FROM tv_shows, tv_show_genres
+FROM tv_shows, tv_show_genres, tv_genres
+WHERE tv_shows.id IS NOT NULL
+AND tv_shows.id = tv_show_genres.show_id
+GROUP BY tv_shows.title, tv_show_genres.genre_id
 ORDER BY tv_shows.title, tv_show_genres.genre_id ASC;
