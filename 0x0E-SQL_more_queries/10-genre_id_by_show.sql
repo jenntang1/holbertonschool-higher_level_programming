@@ -1,4 +1,4 @@
--- Lists data given one requirement.
+-- Lists all tv shows and their genre id's.
 SELECT tv_shows.title, tv_show_genres.genre_id
 FROM tv_shows, tv_show_genres
 WHERE tv_shows.id IS NOT NULL
