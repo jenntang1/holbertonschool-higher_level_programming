@@ -1,6 +1,6 @@
 -- Lists the genres the tv show Dexter belongs to.
 SELECT a.name
-FROM tv_genres a, tv_show_genres b, tv_shows c
+FROM tv_genres AS a, tv_show_genres AS b, tv_shows AS c
 WHERE c.title = "Dexter"
 AND b.genre_id = a.id
 AND b.show_id = c.id
