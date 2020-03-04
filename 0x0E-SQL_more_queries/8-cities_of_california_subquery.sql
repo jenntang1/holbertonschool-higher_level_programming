@@ -1,4 +1,4 @@
--- Lists a field from a database table.
+-- Lists all cities of California that's in the database.
 SELECT cities.id, cities.name
 FROM states, cities
 WHERE states.name = 'California'
