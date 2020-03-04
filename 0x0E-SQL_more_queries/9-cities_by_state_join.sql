@@ -1,4 +1,4 @@
--- Lists a field from a database table.
+-- Lists all cities in the database.
 SELECT cities.id, cities.name, states.name
 FROM states, cities
 WHERE states.id IS NOT NULL
