@@ -1,4 +1,4 @@
--- Lists data given one requirement.
+-- Lists all tv shows without a genre.
 SELECT c.title, b.genre_id
 FROM tv_show_genres b
 RIGHT JOIN tv_shows c
