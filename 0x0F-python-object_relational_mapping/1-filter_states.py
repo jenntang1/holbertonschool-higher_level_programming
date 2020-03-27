@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
 
-    cursor.execute("SELECT name FROM states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
 
     all_states = cursor.fetchall()
 
