@@ -19,16 +19,16 @@ if __name__ == "__main__":
 
     query = ("SELECT cities.id, cities.name, states.name "
              "FROM states, cities "
-             "WHERE cities.name IS NOT NULL I"
+             "WHERE cities.name IS NOT NULL "
              "AND states.id = cities.state_id "
-             "ORDER BY citiesid")
+             "ORDER BY cities.id")
 
     cursor.execute(query)
 
-    all_cities = cursor.fetchall()
+    data = cursor.fetchall()
 
-    for one_city in all_cities:
-        print(one_city)
+    for result in data:
+        print(result)
 
     cursor.close()
 
