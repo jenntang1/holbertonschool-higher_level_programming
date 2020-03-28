@@ -24,10 +24,10 @@ if __name__ == "__main__":
 
     cursor.execute(query)
 
-    all_states = cursor.fetchall()
+    data = cursor.fetchall()
 
-    for one_state in all_states:
-        print(one_state)
+    for result in data:
+        print(result)
 
     cursor.close()
 

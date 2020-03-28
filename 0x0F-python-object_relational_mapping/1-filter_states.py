@@ -17,12 +17,15 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
 
-    cursor.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+    cursor.execute("SELECT * "
+                   "FROM states "
+                   "WHERE name LIKE 'N%'"
+                   "ORDER BY id")
 
-    all_states = cursor.fetchall()
+    data = cursor.fetchall()
 
-    for one_state in all_states:
-        print(one_state)
+    for result in data:
+        print(result)
 
     cursor.close()
 
