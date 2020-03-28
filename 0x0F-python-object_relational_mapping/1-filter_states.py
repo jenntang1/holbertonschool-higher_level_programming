@@ -18,10 +18,8 @@ if __name__ == "__main__":
     cursor = connection.cursor()
 
     cursor.execute("SELECT states.id, states.name "
-                   "FROM INFORMATION_SCHEMA.TABLES, states "
-                   "WHERE TABLE_SCHEMA = 'hbtn_0e_0_usa' "
-                   "AND TABLE_NAME = 'states' "
-                   "AND states.name LIKE 'N%'"
+                   "FROM states "
+                   "WHERE states.name LIKE 'N%' "
                    "ORDER BY states.id")
 
     data = cursor.fetchall()
