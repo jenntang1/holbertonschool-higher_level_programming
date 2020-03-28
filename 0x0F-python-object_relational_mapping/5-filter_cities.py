@@ -26,9 +26,11 @@ if __name__ == "__main__":
 
     cursor.execute(query)
 
-    s = ', '.join([result[0] for result in cursor.fetchall()])
+    data = cursor.fetchall()
 
-    print(s)
+    string = ', '.join([result[0] for result in data])
+
+    print(string)
 
     cursor.close()
 
