@@ -17,10 +17,13 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
 
-    cursor.execute("SELECT states.id, states.name "
-                   "FROM states "
-                   "WHERE states.name LIKE 'N%' "
-                   "ORDER BY states.id")
+    query = ("SELECT states.id, states.name "
+             "FROM states "
+             "WHERE states.name IS NOT NULL "
+             "AND states.name LIKE 'N%' "
+             "ORDER BY states.id")
+
+    cursor.execute(query)
 
     data = cursor.fetchall()
 
