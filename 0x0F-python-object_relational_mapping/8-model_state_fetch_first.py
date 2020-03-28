@@ -7,7 +7,6 @@ if __name__ == "__main__":
     from sys import argv
     from sqlalchemy import create_engine
     from sqlalchemy.orm import sessionmaker
-    from sqlalchemy.orm.exc import NoResultFound
     from model_state import Base, State
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
