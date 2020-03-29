@@ -17,12 +17,8 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
 
-    query = ("SELECT * "
-             "FROM states "
-             "WHERE name = '%s' "
-             "ORDER BY id" % argv[4])
-
-    cursor.execute(query)
+    cursor.execute("""SELECT * FROM states WHERE name =
+                   %(name)s ORDER BY id""", {'name': argv[4]})
 
     data = cursor.fetchall()
 
