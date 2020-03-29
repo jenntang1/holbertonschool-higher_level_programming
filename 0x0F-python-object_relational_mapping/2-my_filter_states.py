@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 2. Filter states by user input """
+""" 2. Filter states by user input. """
 
 
 if __name__ == "__main__":
