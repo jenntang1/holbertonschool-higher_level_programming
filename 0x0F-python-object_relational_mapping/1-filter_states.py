@@ -19,9 +19,8 @@ if __name__ == "__main__":
 
     query = ("SELECT states.id, states.name "
              "FROM states "
-             "WHERE states.name IS NOT NULL "
-             "AND states.name LIKE 'N%' "
-             "ORDER BY states.id")
+             "WHERE states.name LIKE '{}' "
+             "ORDER BY states.id".format('N%'))
 
     cursor.execute(query)
 
