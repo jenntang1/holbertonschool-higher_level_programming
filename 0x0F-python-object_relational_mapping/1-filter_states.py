@@ -19,7 +19,6 @@ if __name__ == "__main__":
 
     query = ("SELECT * "
              "FROM states "
-             "WHERE name "
              "ORDER BY id")
 
     cursor.execute(query)
