@@ -19,15 +19,16 @@ if __name__ == "__main__":
 
     query = ("SELECT states.id, states.name "
              "FROM states "
-             "WHERE states.name LIKE '{}' "
-             "ORDER BY states.id".format('N%'))
+             "WHERE states.name "
+             "ORDER BY states.id")
 
     cursor.execute(query)
 
     data = cursor.fetchall()
 
     for result in data:
-        print(result)
+        if 'N' in result[1][0]:
+            print(result)
 
     cursor.close()
 
