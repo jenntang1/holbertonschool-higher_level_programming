@@ -17,17 +17,17 @@ if __name__ == "__main__":
 
     cursor = connection.cursor()
 
-    query = ("SELECT states.id, states.name "
+    query = ("SELECT * "
              "FROM states "
-             "WHERE states.name "
-             "ORDER BY states.id")
+             "WHERE name "
+             "ORDER BY id")
 
     cursor.execute(query)
 
     data = cursor.fetchall()
 
     for result in data:
-        if 'N' in result[1][0]:
+        if 'N' == result[1][0]:
             print(result)
 
     cursor.close()
