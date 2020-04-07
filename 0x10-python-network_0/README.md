@@ -24,39 +24,29 @@ A sub-domain is a sub-division of the domain name and used for better organize a
 A port number is the first field after the hostname and it's separted by a colon.  
 
 7. What a query string is?  
-A query string is 
+A query string is part of an URL that assigns values to a specific paramater, thus making a key-value pair.  
 
-8. What an HTTP request is?  
+8. What are HTTP headers?  
+HTTP headers contains additional information that are passed in a HTTP request or response.  
 
+9. What is the HTTP message body?  
+The HTTP message body is the data passed in a HTTP request and response.  
 
-9. What an HTTP response is?  
+10. What an HTTP request method is?  
+GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS, TRACE, PATCH are HTTP request methods that should always be in uppercase.  
 
+11. What an HTTP response status code is?  
+An HTTP response status code indicates whether a HTTP request was successfully passed or not.  
 
-10. What HTTP headers are?  
+12. What is an HTTP Cookie?  
+An HTTP Cookie is a small piece of data that the server sends to the client.  
 
-
-11. What the HTTP message body is?  
-
-
-12. What an HTTP request method is?  
-
-
-13. What an HTTP response status code is?  
-
-
-14. What an HTTP Cookie is?  
-
-
-15. How to make a request with cURL?  
-
-
-16. What happens when you type google.com in your browser (Application level)?  
-
+13. How to make a request with cURL?  
+Refer to the man page for cURL.  
 
 ## Resources ##
 0. HTTP (HyperText Transfer Protocol)  
 https://www.ntu.edu.sg/home/ehchua/programming/webprogramming/http\_basics.html  
-
 
 1. HTTP cookies  
 https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies  
