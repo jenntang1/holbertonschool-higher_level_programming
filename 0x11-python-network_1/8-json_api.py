@@ -16,7 +16,8 @@ if __name__ == "__main__":
 
     else:
         url = 'http://0.0.0.0:5000/search_user'
-        values= {'q': sys.argv[1]}
+        q = sys.argv[1]
+        values= {'q': q}
         response = requests.post(url, data=values)
         try:
             json_dict = response.json()
