@@ -18,4 +18,4 @@ if __name__ == "__main__":
                                       response[item].get('commit')
                                       .get('author').get('name')))
             except KeyError:
-                continue
+                pass
