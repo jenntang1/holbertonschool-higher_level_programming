@@ -11,7 +11,11 @@ if __name__ == "__main__":
     owner = sys.argv[2]
     url = 'https://api.github.com/repos/{}/{}/commits'.format(owner, repo)
     response = requests.get(url).json()
-    for item in range(0, 10):
-        print("{}: {}".format(response[item].get('sha'),
-                              response[item].get('commit')
-                              .get('author').get('name')))
+    if response:
+        for item in range(0, 10):
+            try:
+                print("{}: {}".format(response[item].get('sha'),
+                                      response[item].get('commit')
+                                      .get('author').get('name')))
+            except KeyError:
+                continue
