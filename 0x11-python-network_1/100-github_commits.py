@@ -17,5 +17,5 @@ if __name__ == "__main__":
                 print("{}: {}".format(response[item].get('sha'),
                                       response[item].get('commit')
                                       .get('author').get('name')))
-            except KeyError:
+            except:
                 pass
