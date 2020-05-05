@@ -1,5 +1,6 @@
 #!/usr/bin/node
-// Searches for the second largest integer in list
+// Finds the second largest integer in list
+// Sorts the list and returns the second to last element
 // If no argument passed, print "0"
 // If only one argument passed, print "0"
 
