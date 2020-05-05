@@ -14,10 +14,15 @@ var varName;
 ```
 
 2. What are differences between var, const and let?  
-
+var was the oncestral way of declaring a variable.  Today, let is wide used to declare variables that could be reassigned during execution.  Meanwhile, const is also used to declare variables but can't be reassigned.  
 
 3. What are all the data types available in Javascript?  
-
+   a. undefined
+   b. Boolean
+   c. Number
+   d. String
+   e. BigInt
+   f. Symbol
 
 4. How to use the if, if ... else statements?  
 ```js
@@ -27,35 +32,6 @@ if (a > 0) {
     result = 'NOT positive';
   }
 ```
-
-5. How to use comments?  
-
-
-6. How to affect values to variables?  
-
-
-7. How to use while and for loops?  
-
-
-8. How to use break and continue statements?  
-
-
-9. What is a function and how do you use functions?  
-
-
-10. What does a function that does not use any return statement return?  
-
-
-11. Scope of variables?  
-
-
-12. What are the arithmetic operators and how to use them?  
-
-
-13. How to manipulate dictionary?  
-
-
-14. How to import a file?  
 
 ## Resources ##
 0. JavaScript basics  
