@@ -12,7 +12,7 @@ function factorial (num) {
   if (parseInt(num) === 0 || parseInt(num) === 1 || isNaN(num)) {
     return 1;
   } else if (parseInt(num) < 0) {
-    //pass
+    // pass
   } else {
     return parseInt(num) * factorial(parseInt(num) - 1);
   }
