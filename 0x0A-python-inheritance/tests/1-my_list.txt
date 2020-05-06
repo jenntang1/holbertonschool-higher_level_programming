@@ -56,6 +56,12 @@ TypeError: append() takes exactly one argument (0 given)
 >>> my_list.print_sorted()
 [None]
 
->>> my_list = MyList([10, 1, 2, 5,])
->>> my_list.print_sorted()
-[1, 2, 5, 10]
+>>> old_list = MyList([1, 4, 2, 3, 5])
+>>> print(old_list)
+[1, 4, 2, 3, 5]
+
+>>> old_list.print_sorted()
+[1, 2, 3, 4, 5]
+
+>>> print(old_list)
+[1, 4, 2, 3, 5]
