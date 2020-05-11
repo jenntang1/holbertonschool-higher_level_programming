@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // Rectangle with conditions
 
-class Rectangle {
+module.exports = class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0) {
       return new Rectangle();
@@ -10,6 +10,4 @@ class Rectangle {
       this.height = h;
     }
   }
-}
-
-module.exports = Rectangle;
+};
