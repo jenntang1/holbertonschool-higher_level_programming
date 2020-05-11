@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // Rectangle with a print instance method
 
-class Rectangle {
+module.exports = class Rectangle {
   constructor (w, h) {
     if (w <= 0 || h <= 0) {
       return new Rectangle();
@@ -23,6 +23,4 @@ class Rectangle {
       console.log(str);
     }
   }
-}
-
-module.exports = Rectangle;
+};
