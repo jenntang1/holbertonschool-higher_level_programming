@@ -3,7 +3,7 @@
 
 const ParentSquare = require('./5-square.js');
 
-class Square extends ParentSquare {
+module.exports = class Square extends ParentSquare {
   charPrint (c) {
     let row = 0;
     let col = 0;
@@ -25,6 +25,4 @@ class Square extends ParentSquare {
       }
     }
   }
-}
-
-module.exports = Square;
+};
