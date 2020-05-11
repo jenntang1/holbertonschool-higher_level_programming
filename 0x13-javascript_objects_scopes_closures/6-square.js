@@ -1,18 +1,9 @@
 #!/usr/bin/node
 // Square class with a charPrint(c) instance method
 
-const Rectangle = require('./4-rectangle');
+const ParentSquare = require('./5-square.js');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-    if (size <= 0) {
-      return new Square();
-    } else if (size >= 1) {
-      this.size = size;
-    }
-  }
-
+class Square extends ParentSquare {
   charPrint (c) {
     let row = 0;
     let col = 0;
