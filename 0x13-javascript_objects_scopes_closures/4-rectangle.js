@@ -25,7 +25,7 @@ class Rectangle {
   }
 
   rotate () {
-    let swap;
+    let swap = 0;
     swap = this.width;
     this.width = this.height;
     this.height = swap;
