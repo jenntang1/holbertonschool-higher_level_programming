@@ -8,12 +8,12 @@ const myArgs = process.argv.slice(2);
 // If there's an error, then print the error object
 // If not, print the content of the file
 const fs = require('fs');
-fs.readFile(myArgs[0], 'utf-8', (error, content) => {
+fs.readFile(myArgs[0], 'utf-8', function (error, content) {
   if (error) {
     const errMsg = { Error: error.message };
     const obj = Object.assign({}, errMsg, error);
     console.log(obj);
-  } else {
-    console.log(content);
+  } else if (content) {
+    process.stdout.write(content);
   }
 });
