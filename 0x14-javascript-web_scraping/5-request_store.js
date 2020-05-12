@@ -10,14 +10,14 @@ const request = require('request');
 const fs = require('fs');
 
 // GET request and save to file
-request.get(myArgs[0], function (error, response, body) {
-  if (body) {
+request.get(myArgs[0], (error, response, body) => {
+  if (error) {
+    console.error(error);
+  } else {
     fs.writeFile(myArgs[1], body, 'utf-8', (error) => {
       if (error) {
         console.error(error);
       }
     });
-  } else {
-    console.error(error);
   }
 });
