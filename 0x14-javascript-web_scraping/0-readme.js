@@ -10,7 +10,9 @@ const myArgs = process.argv.slice(2);
 const fs = require('fs');
 fs.readFile(myArgs[0], 'utf-8', (error, content) => {
   if (error) {
-    console.error(error);
+    let errMsg = { Error: error.message };
+    let obj = Object.assign({}, errMsg, error);
+    console.log(obj);
   } else {
     console.log(content);
   }
