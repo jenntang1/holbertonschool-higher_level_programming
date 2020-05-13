@@ -9,9 +9,9 @@ const myArgs = process.argv.slice(2);
 const request = require('request');
 const url = myArgs[0].replace('films', 'people/18');
 request.get(url, { json: true }, function (error, response, body) {
-  if (body) {
-    console.log(body.films.length);
-  } else {
+  if (error) {
     console.error(error);
+  } else if (body.films) {
+    console.log(body.films.length);
   }
 });
