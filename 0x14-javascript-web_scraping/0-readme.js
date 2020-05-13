@@ -12,19 +12,14 @@ const file = myArgs[0];
 
 fs.open(file, 'r', (error, fd) => {
   if (error) {
-    return console.error(error);
+    console.log(error);
   } else {
     fs.readFile(file, 'utf-8', (error, content) => {
       if (error) {
-        return console.error(error);
+        console.log(error);
       } else {
         process.stdout.write(content);
       }
     });
   }
-  fs.close(fd, (error) => {
-    if (error) {
-      return console.error(error);
-    }
-  });
 });
