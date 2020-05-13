@@ -37,6 +37,16 @@ Traceback (most recent call last):
 ...
 ValueError: height must be greater than 0
 
+>>> bg.integer_validator("zero", 0)
+Traceback (most recent call last):
+...
+ValueError: zero must be greater than 0
+
+>>> bg.integer_validator("other", -3.0)
+Traceback (most recent call last):
+...
+TypeError: other must be an integer
+
 >>> bg.integer_validator("width", -3)
 Traceback (most recent call last):
 ...
