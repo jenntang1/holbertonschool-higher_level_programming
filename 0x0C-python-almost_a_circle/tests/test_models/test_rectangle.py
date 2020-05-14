@@ -187,5 +187,12 @@ class MyTest(unittest.TestCase):
         test = Rectangle.save_to_file([Rectangle(1, 2)])
         self.assertEqual(test, None)
 
+    def test_create(self):
+        """ Checking create method when id is passed """
+        test1 = Rectangle(3, 5, 1)
+        test1_dict = test1.to_dictionary()
+        test2 = Rectangle.create(**test1_dict)
+        self.assertEqual(type(test2), type(test2))
+
 if __name__ == "__main__":
     unittest.main()
