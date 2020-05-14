@@ -188,11 +188,18 @@ class MyTest(unittest.TestCase):
         self.assertEqual(test, None)
 
     def test_create(self):
-        """ Checking create method when id is passed """
+        """ Checking create method """
         test1 = Rectangle(3, 5, 1)
         test1_dict = test1.to_dictionary()
         test2 = Rectangle.create(**test1_dict)
         self.assertEqual(type(test2), type(test2))
+
+    def test_save_to_file(self):
+        """ Checking save_to_file method """
+        test1 = Rectangle(10, 7, 2, 8)
+        test2 = Rectangle(2, 4)
+        saved = Rectangle.save_to_file([test1, test2])
+        self.assertTrue(True)
 
 if __name__ == "__main__":
     unittest.main()
