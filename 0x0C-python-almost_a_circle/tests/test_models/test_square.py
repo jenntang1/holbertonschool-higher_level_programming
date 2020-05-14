@@ -153,5 +153,12 @@ class MyTest(unittest.TestCase):
         test = Square.save_to_file([Square(1)])
         self.assertEqual(test, None)
 
+    def test_create(self):
+        """ Checking create method """
+        test1 = Square(3, 5, 1)
+        test1_dict = test1.to_dictionary()
+        test2 = Square.create(**test1_dict)
+        self.assertEqual(type(test2), type(test2))
+
 if __name__ == "__main__":
     unittest.main()
